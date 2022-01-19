@@ -1,0 +1,30 @@
+<div class="schedule_form">
+  <%= form_with model: schedule, local: true do |f| %>
+    <% if schedule.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(schedule.errors.count, "error") %> prohibited this meeting from being saved:</h2>
+        <ul>
+          <% schedule.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <table class="table">
+      <tr>
+        <td>予定</td>
+        <td><%= f.text_field :name %></td>
+      </tr>
+      <tr>
+        <td>予定詳細内容</td>
+        <td><%= f.text_area :body %></td>
+      </tr>
+      <tr>
+        <td>開始時刻</td>
+        <td><%= f.datetime_select :start_time %></td>
+      </tr>
+    </table>
+    <%= f.submit "予定を作成", class:"btn btn-succcess" %>
+  <% end %>
+</div>
