@@ -17,7 +17,7 @@ class SchedulesController < ApplicationController
   end
 
   def create
-    @schedule = Schedule.new(schedule.params)
+    @schedule = Schedule.new(schedule_params)
     if @schedule.save
       redirect_to schedule_path(@schedule), notice: "予定を作成しました。"
     else
@@ -34,7 +34,8 @@ class SchedulesController < ApplicationController
   end
 
   def destroy
-    @schedules.destroy
+    @schedule.destroy
+    redirect_to :index, notice: "予定を削除しました。"
   end
 
   private
