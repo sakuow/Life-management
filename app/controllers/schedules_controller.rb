@@ -35,7 +35,7 @@ class SchedulesController < ApplicationController
 
   def destroy
     @schedule.destroy
-    redirect_to :index, notice: "予定を削除しました。"
+    redirect_to schedules_path, notice: "予定を削除しました。"
   end
 
   private

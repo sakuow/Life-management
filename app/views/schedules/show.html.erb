@@ -1,2 +1,23 @@
-<h1>Schedules#show</h1>
-<p>Find me in app/views/schedules/show.html.erb</p>
+<div class="schedule_show">
+  <h1>予定詳細</h1>
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>予定名:</strong>
+    <%= @schedule.name %>
+  </p>
+
+  <p>
+    <strong>予定開始時刻:</strong>
+    <%= @schedule.start_time.strftime('%m月%d日 %H:%M') %>
+  </p>
+
+  <p>
+    <strong>予定詳細内容:</strong>
+    <%= @schedule.body %>
+  </p>
+
+  <%= link_to "予定一覧へ戻る", schedules_path, class:"btn btn-primary" %><br>
+  <%= link_to "予定内容の変更", edit_schedule_path(@schedule), class:"btn btn-success" %><br>
+  <%= link_to "予定を削除する", schedule_path(@schedule), method: :delete, class:"btn btn-danger", data: { confirm: "予定を削除しても問題ありませんか？" } %>
+</div>
