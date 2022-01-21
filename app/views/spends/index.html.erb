@@ -15,7 +15,7 @@
     <tbody>
       <% @spends.each do |spend| %>
       <tr>
-        <td><%= spend.name %></td>
+        <td><%= spend.body %></td>
         <td><%= spend.money %></td>
         <td><%= link_to "詳細", spend_path(spend) %></td>
         <td><%= link_to "変更", edit_spend_path(spend) %></td>
@@ -33,10 +33,9 @@
     <% spends.each do |spend| %>
       <div>
         ・<%= spend.body %>
-        <%= spend.money %> 開始
+        <%= spend.money %>
       </div>
     <% end %>
   <% end %>
-
 
 </div>
