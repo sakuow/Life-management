@@ -1,2 +1,7 @@
-<h1>Schedules#edit</h1>
-<p>Find me in app/views/schedules/edit.html.erb</p>
+<div class="schedule_edit">
+  <h1>予定内容の変更</h1>
+
+  <%= render 'form', schedule: @schedule %>
+
+  <%= link_to 'Back', schedules_path %>
+</div>

@@ -21,15 +21,15 @@ class SchedulesController < ApplicationController
     if @schedule.save
       redirect_to schedule_path(@schedule), notice: "予定を作成しました。"
     else
-      render :new
+      render :new, notice: "予定の作成に失敗しました。"
     end
   end
 
   def update
     if @schedule.update(schedule_params)
-      redirect_to :show, notice: "予定を更新しました。"
+      redirect_to schedule_path(@schedule), notice: "予定を更新しました。"
     else
-      render :new
+      render :new, notice: "予定の変更に失敗しました。"
     end
   end
 

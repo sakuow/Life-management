@@ -17,9 +17,9 @@
       <tr>
         <td><%= schedule.name %></td>
         <td><%= schedule.start_time.strftime('%d日 %H:%M') %></td>
-        <td><%= link_to "予定詳細", schedule_path(schedule) %></td>
-        <td><%= link_to "予定内容編集", edit_schedule_path(schedule) %></td>
-        <td><%= link_to "予定削除", schedule_path(schedule), method: :delete, data: { confirm: "予定を削除しても問題ありませんか？" } %></td>
+        <td><%= link_to "予定の詳細", schedule_path(schedule) %></td>
+        <td><%= link_to "予定内容の変更", edit_schedule_path(schedule) %></td>
+        <td><%= link_to "予定の削除", schedule_path(schedule), method: :delete, data: { confirm: "予定を削除しても問題ありませんか？" } %></td>
       </tr>
       <% end %>
     </tbody>
