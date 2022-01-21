@@ -18,6 +18,8 @@
   </p>
 
   <%= link_to "予定一覧へ戻る", schedules_path, class:"btn btn-primary" %><br>
-  <%= link_to "予定内容の変更", edit_schedule_path(@schedule), class:"btn btn-success" %><br>
-  <%= link_to "予定を削除する", schedule_path(@schedule), method: :delete, class:"btn btn-danger", data: { confirm: "予定を削除しても問題ありませんか？" } %>
+  <p>
+    <%= link_to "予定の変更", edit_schedule_path(@schedule), class:"btn btn-success" %> 
+    <%= link_to "予定の削除", schedule_path(@schedule), method: :delete, class:"btn btn-danger", data: { confirm: "予定を削除しても問題ありませんか？" } %>
+  </p>
 </div>
