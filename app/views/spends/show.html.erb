@@ -9,7 +9,7 @@
 
   <p>
     <strong>支出金額:</strong>
-    <%= @spend.money %>
+    <%= number_to_currency(@spend.money, locale:'jp') %>
   </p>
 
   <%= link_to "支出一覧へ戻る", spends_path, class:"btn btn-primary" %><br>
