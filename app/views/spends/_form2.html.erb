@@ -1,0 +1,26 @@
+<div class="spend_form">
+  <%= form_with model: spend, local: true do |f| %>
+    <% if spend.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(spend.errors.count, "error") %> prohibited this spend from being saved:</h2>
+        <ul>
+          <% spend.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <table>
+      <tr>
+        <td>予定</td>
+        <td><%= f.text_area :body %></td>
+      </tr>
+      <tr>
+        <td>予定詳細内容</td>
+        <td><%= f.text_field :money %></td>
+      </tr>
+    </table>
+    <%= f.submit "支出記録を作成", class:"btn btn-succcess" %>
+  <% end %>
+</div>
