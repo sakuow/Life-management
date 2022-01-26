@@ -19,20 +19,6 @@
   text-align: center;
 }
 
-.schedule_edit {
-  margin: 30px;
-  text-align: center;
-}
-
-// formページ
-.schedule_form {
-  width: 70%;
-  margin: 0 auto;
-  .schedule_form_button {
-    margin: 15px;
-  }
-}
-
 // showページ
 .schedule_show {
   margin: 30px;
@@ -45,5 +31,20 @@
     .schedule_show_button_a {
       margin: 15px;
     }
+  }
+}
+
+// editページ
+.schedule_edit {
+  margin: 30px;
+  text-align: center;
+}
+
+// formページ
+.schedule_form {
+  width: 70%;
+  margin: 0 auto;
+  .schedule_form_button {
+    margin: 15px;
   }
 }
