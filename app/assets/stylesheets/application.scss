@@ -28,6 +28,7 @@
   }
 }
 
+// registration　newページ
 .user_registration {
   text-align: center;
   .user_registration_head {
@@ -38,6 +39,22 @@
     margin-bottom: 15px;
   }
   .user_registration_button {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+// session newページ
+.user_session {
+  text-align: center;
+  .user_session_head {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .user_session_field {
+    margin-bottom: 15px;
+  }
+  .user_session_button {
     margin-top: 30px;
     margin-bottom: 15px;
   }
