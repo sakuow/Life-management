@@ -2,28 +2,30 @@
   <h1>予定詳細</h1>
   <p id="notice"><%= notice %></p>
 
-  <table class="table">
-    <tr>
-      <td>予定名</td>
-      <td><%= @schedule.name %></td>
-    </tr>
-    <tr>
-      <td>予定詳細内容</td>
-      <td><%= @schedule.body %></td>
-    </tr>
-    <tr>
-      <td>開始時刻</td>
-      <td><%= @schedule.start_time.strftime('%m月%d日 %H:%M') %></td>
-    </tr>
-  </table>
+  <div class="schedule_show_form">
+    <table class="table">
+      <tr>
+        <td>予定名</td>
+        <td><%= @schedule.name %></td>
+      </tr>
+      <tr>
+        <td>予定詳細内容</td>
+        <td><%= @schedule.body %></td>
+      </tr>
+      <tr>
+        <td>開始時刻</td>
+        <td><%= @schedule.start_time.strftime('%m月%d日 %H:%M') %></td>
+      </tr>
+    </table>
+  </div>
 
   <div class="schedule_show_button">
-    <%= link_to "予定一覧へ戻る", schedules_path, class:"btn btn-primary" %><br>
+    <%= link_to "予定一覧へ戻る", schedules_path %><br>
+    <p class="schedule_show_button_a">
+      <%= link_to "予定の変更", edit_schedule_path(@schedule) %>
+      /
+      <%= link_to "予定の削除", schedule_path(@schedule), method: :delete, data: { confirm: "予定を削除しても問題ありませんか？" } %>
+    </p>
   </div>
-  <p>
-    <%= link_to "予定の変更", edit_schedule_path(@schedule), class:"btn btn-success" %> 
-    /
-    <%= link_to "予定の削除", schedule_path(@schedule), method: :delete, class:"btn btn-danger", data: { confirm: "予定を削除しても問題ありませんか？" } %>
-  </p>
 </div>
 

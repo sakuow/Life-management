@@ -37,4 +37,13 @@
 .schedule_show {
   margin: 30px;
   text-align: center;
+  .schedule_show_form {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .schedule_show_button {
+    .schedule_show_button_a {
+      margin: 15px;
+    }
+  }
 }
