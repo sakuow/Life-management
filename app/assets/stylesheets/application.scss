@@ -19,3 +19,11 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+.simple-calendar {
+  .calendar-heading {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
