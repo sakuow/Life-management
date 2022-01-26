@@ -14,7 +14,7 @@
           <li class="header-icon-li">
             <%= link_to "予定の新規作成", new_schedule_path, class: 'btn btn-success navbar-brand header-menu' %>
           </li>
-          <li>
+          <li class="header-icon-li">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-danger navbar-brand header-menu' %>
           </li>
         </ul>
@@ -24,10 +24,10 @@
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto nav header-icon-ul">
-          <li>
+          <li class="header-icon-li">
             <%= link_to "新規登録", new_user_registration_path, class:"btn btn-success" %>
           </li>
-          <li>
+          <li class="header-icon-li">
             <%= link_to "ログイン", new_user_session_path, class:"btn btn-primary" %>
           </li>
         </ul>
