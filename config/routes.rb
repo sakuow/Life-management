@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'sessions/new'
   get 'sessions/create'
+  root :to => 'homes#top'
   resources :schedules
   resources :spends
   resources :incomes
