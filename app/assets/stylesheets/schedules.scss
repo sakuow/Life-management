@@ -16,7 +16,20 @@
 // newページ
 .schedule_new {
   margin: 30px;
-  .schedule_new_head {
-    text-align: center;
+  text-align: center;
+}
+
+// formページ
+.schedule_form {
+  width: 70%;
+  margin: 0 auto;
+  .schedule_form_button {
+    margin: 15px;
   }
+}
+
+// showページ
+.schedule_show {
+  margin: 30px;
+  text-align: center;
 }

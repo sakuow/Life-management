@@ -11,7 +11,7 @@
       </div>
     <% end %>
 
-    <table>
+    <table class="table">
       <tr>
         <td>予定</td>
         <td><%= f.text_field :name %></td>
@@ -25,6 +25,7 @@
         <td><%= f.datetime_select :start_time %></td>
       </tr>
     </table>
-    <%= f.submit "予定を保存", class:"btn btn-succcess" %>
+    <div class="schedule_form_button">
+    <%= f.submit "予定を保存", class:"btn btn-success" %>
   <% end %>
 </div>
