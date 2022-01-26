@@ -2,13 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// _form
-
+// indexページ
 .schedule_index {
-  .schedule_head {
+  margin: 30px;
+  .schedule_index_head {
     text-align: center;
   }
-  .schedule_alert {
-    text-align: right;
+  .schedule_th {
+    text-align: center;
+  }
+}
+
+// newページ
+.schedule_new {
+  margin: 30px;
+  .schedule_new_head {
+    text-align: center;
   }
 }

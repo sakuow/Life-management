@@ -17,6 +17,7 @@ class SchedulesController < ApplicationController
 
   def create
     @schedule = Schedule.new(schedule_params)
+    @schedule.user = current_user
     if @schedule.save
       redirect_to schedule_path(@schedule), notice: "予定を作成しました。"
     else

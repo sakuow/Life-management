@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-lg bg-white navbar-dark header_header">
+<div class="navbar navbar-expand-lg bg-dark navbar-white header_header">
   <div class="container">
 
     <% if user_signed_in? %>
@@ -9,14 +9,19 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto nav header-icon-ul">
           <li class="header-icon-li">
-            <%= link_to "予定一覧表", schedules_path, class: 'navbar-brand header-menu' %>
+            <%= link_to "予定一覧表", schedules_path, class: 'btn btn-primary navbar-brand header-menu' %>
+          </li>
+          <li class="header-icon-li">
+            <%= link_to "予定の新規作成", new_schedule_path, class: 'btn btn-success navbar-brand header-menu' %>
           </li>
           <li>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-navbar-brand header-menu' %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-danger navbar-brand header-menu' %>
           </li>
         </ul>
       </div>
+
     <% else %>
+
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto nav header-icon-ul">
           <li>
