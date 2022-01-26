@@ -1,8 +1,13 @@
 <div class="homes_top">
-  <h1>Life Management</h1>
+  <h1 class="homes_top_head">Life Management</h1>
   <p>日々の予定やスケジュールをカレンダーで管理しましょう。</p>
   <p>予定を名前、詳細、開始時刻を入力し予定の作成を行うことでカレンダー上でわかりやすく表示させることができます。</p>
   <p>消化した予定はわかりやすいように削除しましょう。</p>
-  <%= link_to "新規登録", new_user_registration_path, class:"btn btn-success" %>
-  <%= link_to "ログイン", new_user_session_path, class:"btn btn-primary" %>
+  <span class="left_span">
+    <%= link_to "新規登録", new_user_registration_path, class:"btn btn-success" %>
+  </span>
+  /
+  <span class="right_span">
+   <%= link_to "ログイン", new_user_session_path, class:"btn btn-primary" %>
+  </span>
 </div>
